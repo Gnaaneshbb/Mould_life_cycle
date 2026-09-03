@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mould Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="card dashboard-card">
+
+        <h2>Mould Production Dashboard</h2>
+
+        <div class="status-section">
+            <div class="status-badge" id="statusBadge">STATUS</div>
+        </div>
+
+        <div class="grid">
+
+            <div class="info-box">
+                <h3>Mould ID</h3>
+                <p id="mouldIdDisplay">--</p>
+            </div>
+
+            <div class="info-box">
+                <h3>Total Cycles</h3>
+                <p id="totalCycles">0</p>
+            </div>
+
+
+            <div class="info-box">
+                <h3>Next Inspection</h3>
+                <p id="nextInspection">--</p>
+            </div>
+
+        </div>
+
+        <button onclick="goBack()">Back to Production</button>
+
+    </div>
+</div>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>

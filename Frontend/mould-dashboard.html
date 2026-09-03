@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Mould Dashboard</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f4f6f9;
+}
+
+.container{
+width:500px;
+margin:auto;
+margin-top:120px;
+background:white;
+padding:35px;
+border-radius:10px;
+box-shadow:0px 4px 12px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+h2{
+margin-bottom:25px;
+}
+
+.data-box{
+background:#eef2f7;
+padding:12px;
+margin-bottom:15px;
+border-radius:6px;
+font-size:16px;
+}
+
+button{
+margin-top:20px;
+padding:12px 20px;
+background:#2c7be5;
+border:none;
+color:white;
+border-radius:6px;
+cursor:pointer;
+font-size:15px;
+}
+
+button:hover{
+background:#1a68d1;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Mould Dashboard</h2>
+
+<div class="data-box">
+<b>Mould ID:</b> <span id="mouldId"></span>
+</div>
+
+<div class="data-box">
+<b>Total Cycles:</b> <span id="totalCycles"></span>
+</div>
+
+<div class="data-box">
+<b>Status:</b> <span id="status"></span>
+</div>
+
+<div class="data-box">
+<b>Next Inspection:</b> <span id="nextInspection"></span>
+</div>
+
+<button onclick="addCycles()">
+Add Cycles
+</button>
+
+</div>
+
+<script src="js/mould-dashboard.js"></script>
+
+</body>
+</html>

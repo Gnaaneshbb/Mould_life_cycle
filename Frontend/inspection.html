@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inspection Upload</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="card inspection-card">
+
+        <h2>Inspection Report Upload</h2>
+
+        <div class="info-box">
+            <p><strong>Mould ID:</strong> <span id="mouldDisplay"></span></p>
+        </div>
+
+        <form id="inspectionForm">
+            <input type="file" id="inspectionFile" accept="application/pdf" required>
+
+            <button type="submit" class="primary-btn">
+                Upload Inspection Report
+            </button>
+        </form>
+
+        <div id="statusMessage"></div>
+
+        <button id="backBtn" class="secondary-btn">
+            Back to Production
+        </button>
+
+    </div>
+</div>
+
+<script src="js/inspection.js"></script>
+
+</body>
+</html>

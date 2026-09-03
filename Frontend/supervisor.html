@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Supervisor Dashboard</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    background:#f4f6f9;
+    margin:0;
+    padding:0;
+}
+
+.container{
+    width:70%;
+    margin:auto;
+    margin-top:40px;
+}
+
+h1{
+    text-align:center;
+}
+
+/* Buttons container */
+
+.top-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:15px;
+}
+
+/* Logout button */
+
+.logout-btn{
+    background:#dc3545;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.logout-btn:hover{
+    background:#c82333;
+}
+
+/* Generate report button */
+
+.report-btn{
+    background:#2c7be5;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.report-btn:hover{
+    background:#1a68d1;
+}
+
+/* Table */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    margin-top:25px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+th,td{
+    padding:12px;
+    border-bottom:1px solid #ddd;
+    text-align:center;
+}
+
+th{
+    background:#2c7be5;
+    color:white;
+}
+
+tr:hover{
+    background:#f1f1f1;
+    cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Inspection Pending Moulds</h1>
+
+<div class="top-buttons">
+
+<button class="logout-btn" onclick="logout()">
+Logout
+</button>
+
+<button class="report-btn" onclick="openDashboard()">
+Generate Report
+</button>
+
+</div>
+
+<table id="mouldTable">
+
+<thead>
+<tr>
+<th>Mould ID</th>
+<th>Status</th>
+</tr>
+</thead>
+
+<tbody></tbody>
+
+</table>
+
+</div>
+
+<script src="js/supervisor.js"></script>
+
+</body>
+</html>

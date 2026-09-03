@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Production Entry</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="card">
+    <h2>🏭 Production Header Entry</h2>
+    
+
+    <input type="text" id="operator" readonly>
+    
+    <input type="date" id="date">
+
+    <select id="shift">
+        <option value="">Select Shift</option>
+        <option value="A">Shift A</option>
+        <option value="B">Shift B</option>
+        <option value="C">Shift C</option>
+    </select>
+
+    <select id="mouldId">
+    <option value="">Select Mould ID</option>
+    </select>
+
+    <button onclick="goToCycles()">Next</button>
+    <button class="report-btn" onclick="openDashboard()">
+        Generate Report
+    </button>
+    <button class="logout-btn" onclick="logout()">
+        Logout
+    </button>
+
+    <p id="error" class="error"></p>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/header.js"></script>
+</body>
+</html>

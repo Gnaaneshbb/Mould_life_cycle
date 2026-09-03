@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Mould Inspection Dashboard</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f4f6f9;
+}
+
+.container{
+width:900px;
+margin:auto;
+margin-top:60px;
+background:white;
+padding:30px;
+border-radius:8px;
+box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+button{
+padding:10px 20px;
+background:#2c7be5;
+border:none;
+color:white;
+border-radius:5px;
+cursor:pointer;
+margin-bottom:20px;
+}
+
+button:hover{
+background:#1a68d1;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Mould Inspection Dashboard</h2>
+
+<button onclick="generateReport()">Generate Report</button>
+
+<canvas id="chart"></canvas>
+
+</div>
+
+<script src="js/report.js"></script>
+
+</body>
+
+</html>

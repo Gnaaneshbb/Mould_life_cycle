@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Inspection Upload</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    background:#f4f6f9;
+}
+
+.container{
+    width:420px;
+    margin:auto;
+    margin-top:120px;
+    background:white;
+    padding:35px;
+    border-radius:10px;
+    box-shadow:0px 4px 12px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+h2{
+    margin-bottom:20px;
+}
+
+.mould-box{
+    background:#eef2f7;
+    padding:10px;
+    margin-bottom:20px;
+    border-radius:6px;
+    font-size:16px;
+}
+
+input[type="file"]{
+    margin-top:15px;
+    margin-bottom:20px;
+}
+
+.button-group{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+}
+
+/* Accept button */
+
+.accept-btn{
+    flex:1;
+    padding:12px;
+    background:#28a745;
+    border:none;
+    color:white;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.accept-btn:hover{
+    background:#1e7e34;
+}
+
+/* Reject button */
+
+.reject-btn{
+    flex:1;
+    padding:12px;
+    background:#dc3545;
+    border:none;
+    color:white;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.reject-btn:hover{
+    background:#b02a37;
+}
+
+/* Back button */
+
+.back{
+    margin-top:20px;
+    padding:10px 20px;
+    background:#6c757d;
+    border:none;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.back:hover{
+    background:#545b62;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Inspection Upload</h2>
+
+<div class="mould-box">
+    <b>Mould ID:</b>
+    <span id="mouldId"></span>
+</div>
+
+<input type="file" id="inspectionFile" accept="application/pdf">
+
+<div class="button-group">
+
+<button class="accept-btn" onclick="submitInspection('accepted')">
+Accept Inspection
+</button>
+
+<button class="reject-btn" onclick="submitInspection('rejected')">
+Reject Inspection
+</button>
+
+</div>
+
+<button class="back" onclick="goBack()">
+Back to Dashboard
+</button>
+
+</div>
+
+<script src="js/inspection-upload.js"></script>
+
+</body>
+
+</html>

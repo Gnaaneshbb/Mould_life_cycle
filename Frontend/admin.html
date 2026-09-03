@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Admin Dashboard</title>
+
+<link rel="stylesheet" href="css/admin.css">
+
+<style>
+    .admin-top-buttons{
+    display:flex;
+    gap:15px;
+    margin-bottom:30px;
+}
+
+.logout-btn{
+    background:#dc3545;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:6px;
+    cursor:pointer;
+    margin-bottom:10px;
+}
+
+.report-btn{
+    background:#2c7be5;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:6px;
+    cursor:pointer;
+    margin-bottom:10px;
+}
+
+.logout-btn:hover{
+    background:#c82333;
+}
+
+.report-btn:hover{
+    background:#1a68d1;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Admin Panel</h1>
+<button class="logout-btn" onclick="logout()">
+Logout
+</button>
+<button class="report-btn" onclick="openDashboard()">
+Generate Report
+</button>
+
+<div class="section">
+
+
+<h2>Add Mould</h2>
+
+<input type="text" id="mouldId" placeholder="Mould ID">
+
+<input type="text" id="mouldNumber" placeholder="Mould Number">
+
+<input type="number" id="outerDia" placeholder="Outer Dia">
+
+<input type="number" id="innerDia" placeholder="Inner Dia">
+
+<input type="text" id="type" placeholder="Type">
+
+<button onclick="addMould()">Add Mould</button>
+
+</div>
+
+
+<div class="section">
+
+<h2>Create User</h2>
+
+<input type="text" id="username" placeholder="Username">
+<input type="password" id="password" placeholder="Password">
+<input type="email" id="email" placeholder="Email">
+
+<select id="role">
+<option value="ROLE_OPERATOR">Operator</option>
+<option value="ROLE_SUPERVISOR">Supervisor</option>
+<option value="ROLE_ADMIN">Admin</option>
+</select>
+
+<button onclick="createUser()">Create User</button>
+
+</div>
+<div class="section">
+
+<h3>Delete Mould</h3>
+
+<input type="text" id="deleteMouldId" placeholder="Enter Mould ID">
+
+<button onclick="deleteMould()">
+Delete Mould
+</button>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>Inspection Pending</h2>
+
+<button onclick="loadPending()">Load Pending</button>
+
+<table id="pendingTable">
+
+<thead>
+<tr>
+<th>Mould ID</th>
+<th>Status</th>
+</tr>
+</thead>
+
+<tbody></tbody>
+
+</table>
+
+</div>
+
+
+<div class="section">
+
+<h2>Inspection Completed</h2>
+
+<button onclick="loadCompleted()">Load Completed</button>
+
+<table id="completedTable">
+
+<thead>
+<tr>
+<th>Mould ID</th>
+<th>Status</th>
+</tr>
+</thead>
+
+<tbody></tbody>
+
+</table>
+
+
+</div>
+
+
+</div>
+
+
+<script src="js/admin.js"></script>
+
+</body>
+</html>
